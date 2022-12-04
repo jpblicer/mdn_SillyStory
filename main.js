@@ -37,7 +37,7 @@ const yItem = randomValueFromArray(inserty);
 const zItem =  randomValueFromArray(insertz);
 
 const newStory = storyText
-.replace(':insertx:' , xItem)
+.replaceAll(':insertx:' , xItem)
 .replace(':inserty:' , yItem)
 .replace(':insertz:' , zItem);
 
