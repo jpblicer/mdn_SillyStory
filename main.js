@@ -36,28 +36,28 @@ const xItem = randomValueFromArray(insertx);
 const yItem = randomValueFromArray(inserty);
 const zItem =  randomValueFromArray(insertz);
 
-const newStory = storyText
+let newStory = storyText
 .replaceAll(':insertx:' , xItem)
 .replace(':inserty:' , yItem)
 .replace(':insertz:' , zItem);
 
-/*
+
 randomize.addEventListener('click', result);
 
 function result() {
 
   if(customName.value !== '') {
     const name = customName.value;
-
+    newStory.replaceAll('Bob', customName)
   }
 
   if(document.getElementById("uk").checked) {
-    const weight = Math.round(300);
-    const temperature =  Math.round(94);
-
+    const weight = Math.round(300/14) + ' stone';
+    const temperature =  Math.round((94-32)*.5556) + ' centigrade';
+    newStory = newStory.replaceAll('300 pounds', weight);
+    newStory = newStory.replaceAll('94 fahrenheit', temperature);
   }
 
-  story.textContent = ;
+  story.textContent = newStory;
   story.style.visibility = 'visible';
 }
-*/
